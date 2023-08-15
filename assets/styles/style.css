@@ -32,7 +32,7 @@ body {
   transform: translate(-50%, -50%) rotate(-280deg);
   width: 165%;
   height: 155%;
-  background-image: conic-gradient(#ff00bb 0deg, #ff00bb 90deg, transparent 130deg, transparent 180deg, #4530FF 180deg, #4530FF 270deg, transparent 310deg, transparent 360deg);
+  background-image: conic-gradient(#E99B9B 0deg, #E99B9B 90deg, transparent 130deg, transparent 180deg, #90E8DB 180deg, #90E8DB 270deg, transparent 310deg, transparent 360deg);
   transition: transform 2s;
   animation: rotateAnimation 4s linear infinite;
 }
@@ -78,10 +78,11 @@ body {
 }
 
 .tittle-logo img {
-  max-width: 210px;
+  max-width: 250px;
   width: 100%;
-  max-height: max-content;
-  margin-bottom: 16px;
+  height: 160px;
+  object-fit: contain;
+  margin-bottom: 1rem;
 }
 
 .numero-nome {
@@ -296,3 +297,5 @@ body {
   width: 100%;
   height: 100%;
 }
+
+@media screen and (min-width: 320px) and (max-width: 480px) {}

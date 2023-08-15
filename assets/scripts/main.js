@@ -178,8 +178,4 @@ function radioChecked(event) {
       })
     }
   }
-  
-
-  // resolver a questão do "sortear novamente", para que o botão de loading
-  // sempre apareça toda vez que o botão "sortear" for apertado;
 

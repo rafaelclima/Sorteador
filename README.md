@@ -16,8 +16,8 @@ Just Luck é uma aplicação web moderna e responsiva para sorteios de números 
 - 🔄 Animações suaves e interativas
 - 📱 Suporte completo para dispositivos móveis
 
-## 📱 Demonstração
-![Just Luck - Interface](./.gitassets/demo.gif)
+## 📱 ScreenShot
+![Just Luck - Interface](https://github.com/rafaelclima/Sorteador/blob/master/.gitassets/capa.png?raw=true)
 
 ## 🛠️ Tecnologias Utilizadas
 - HTML5

@@ -1,301 +1,446 @@
-@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lato:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&family=Lato:wght@300;400&display=swap");
 
 body {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 100vh;
-  background-color: #121212;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	background-color: #121212;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
 }
 
 .card-sorteio {
-  width: 500px;
-  height: 600px;
-  padding: 16px;
-  background-color: #000;
-  position: relative;
-  box-shadow: 0px 0px 5px 2px #000;
-  overflow: hidden;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+	width: 90%;
+	max-width: 500px;
+	min-height: 80vh;
+	height: auto;
+	padding: 16px;
+	background-color: #000;
+	position: relative;
+	box-shadow: 0px 0px 5px 2px #000;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 1rem;
+	border-radius: 8px;
+	isolation: isolate;
 }
 
+/* First moving element */
 .card-sorteio::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(-280deg);
-  width: 165%;
-  height: 155%;
-  background-image: conic-gradient(#E99B9B 0deg, #E99B9B 90deg, transparent 130deg, transparent 180deg, #90E8DB 180deg, #90E8DB 270deg, transparent 310deg, transparent 360deg);
-  transition: transform 2s;
-  animation: rotateAnimation 4s linear infinite;
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	border: 2px solid transparent;
+	border-radius: 10px;
+	animation: borderMove 4s linear infinite;
+	pointer-events: none;
 }
 
-@keyframes rotateAnimation {
-  0% {
-    transform: translate(-50%, -50%) rotate(-280deg);
-  }
-
-  100% {
-    transform: translate(-50%, -50%) rotate(-100deg);
-  }
-}
-
+/* Second moving element */
 .card-sorteio::after {
-  content: '';
-  color: #ddd;
-  background-color: #000;
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 592px;
-  width: 492px;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+	content: "";
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	border: 2px solid transparent;
+	border-radius: 10px;
+	animation: borderMove 4s linear infinite;
+	animation-delay: -2s;
+	pointer-events: none;
+}
+
+@keyframes borderMove {
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 .tittle-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 .tittle-logo h1 {
-  text-align: center;
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 2.5rem;
-  letter-spacing: 4px;
-  margin: 0px auto;
+	text-align: center;
+	font-family: "Fjalla One", sans-serif;
+	font-size: 2.5rem;
+	letter-spacing: 4px;
+	margin: 0px auto;
 }
 
 .tittle-logo img {
-  max-width: 250px;
-  width: 100%;
-  height: 160px;
-  object-fit: contain;
-  margin-bottom: 1rem;
+	max-width: 200px;
+	height: 120px;
+	object-fit: contain;
+	margin-bottom: 1rem;
 }
 
 .numero-nome {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
 }
 
 .escolha-sorteio {
-  width: max-content;
-  margin-bottom: 16px;
+	width: max-content;
+	margin-bottom: 16px;
 }
 
 .escolha-sorteio h3 {
-  text-align: center;
-  font-family: 'Lato', sans-serif;
-  color: #FFF;
-  font-size: 2rem;
+	text-align: center;
+	font-family: "Lato", sans-serif;
+	color: #fff;
+	font-size: 2rem;
 }
 
 .radio-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 32px;
-  font-family: 'Lato', sans-serif;
-  color: #FFF;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 32px;
+	font-family: "Lato", sans-serif;
+	color: #fff;
 }
 
 .form-check {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .form-check-input {
-  transform: scale(1.5);
-  margin-right: 10px;
+	transform: scale(1.5);
+	margin-right: 10px;
 }
 
-.form-check-input+label {
-  font-size: 1.3rem;
+.form-check-input + label {
+	font-size: 1.3rem;
 }
 
 .sortear-numero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
 }
 
 .numeros {
-  font-family: 'Lato', sans-serif;
-  color: #FFF;
+	font-family: "Lato", sans-serif;
+	color: #fff;
 }
 
 .numeros h3 {
-  text-align: center;
-  font-size: 1.8rem;
-  margin-bottom: 16px;
+	text-align: center;
+	font-size: 1.8rem;
+	margin-bottom: 16px;
 }
 
 .sorteio-numeros {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
 }
 
 .primeiro-numero,
 .ultimo-numero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4px;
 }
 
 .primeiro-numero label,
 .ultimo-numero label {
-  font-size: 1.2rem;
+	font-size: 1.2rem;
 }
 
 .primeiro-numero input,
 .ultimo-numero input {
-  max-width: 60px;
-  width: 100%;
-  border-radius: 4px;
+	max-width: 60px;
+	width: 100%;
+	border-radius: 4px;
 }
 
 .sortear-nomes {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  width: 100%;
-  margin-bottom: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+	width: 100%;
+	margin-bottom: 16px;
 }
 
 .nomes {
-  width: 70%;
-  text-align: center;
-  border-radius: 8px;
-  font-family: 'Lato', sans-serif;
-  color: #FFF;
+	width: 70%;
+	text-align: center;
+	border-radius: 8px;
+	font-family: "Lato", sans-serif;
+	color: #fff;
 }
 
 .nomes h3 {
-  margin-bottom: 16px;
+	margin-bottom: 16px;
 }
 
 .resultado-sorteio {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
-
-  z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
 }
 
 .btn-sorteio {
-  margin: 16px auto;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  gap: 16px;
+	margin: 16px auto;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	gap: 16px;
 }
 
 .btn-sorteio .btn-blue {
-
-  background-color: #4530FF;
-  color: white;
-  border: none;
+	background-color: #4530ff;
+	color: white;
+	border: none;
 }
 
 .btn-sorteio .btn-blue:hover {
-  background-color: #ff00bb;
-  color: white;
+	background-color: #ff00bb;
+	color: white;
 }
 
 .btn-sorteio .btn-pink {
-  background-color: #ff00bb;
-  color: white;
-  border: none;
-  text-transform: uppercase;
+	background-color: #ff00bb;
+	color: white;
+	border: none;
+	text-transform: uppercase;
 }
 
 .btn-sorteio .btn-pink:hover {
-  background-color: #4530FF;
-  color: white;
+	background-color: #4530ff;
+	color: white;
 }
 
 .loading-animation {
-  width: 60px;
-  height: 60px;
-  border: 5px solid #ccc;
-  border-top: 5px solid #007bff;
-  border-radius: 50%;
-  animation: spin 1.5s linear infinite;
-  margin: 72px auto 0px auto;
-
-  z-index: 2;
-  display: none;
+	width: 60px;
+	height: 60px;
+	border: 5px solid #ccc;
+	border-top: 5px solid #007bff;
+	border-radius: 50%;
+	animation: spin 1.5s linear infinite;
+	margin: 72px auto 0px auto;
+	z-index: 2;
+	display: none;
 }
 
 @keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-
-  100% {
-    transform: rotate(360deg);
-  }
+	0% {
+		transform: rotate(0deg);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 .resultado {
-  height: 180px;
-  width: 320px;
-  display: none;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: 2px solid;
-  border-radius: 8px;
-  margin: 16px auto 8px auto;
-  font-family: 'Lato', sans-serif;
-  background: linear-gradient(90deg, rgba(69, 50, 30, 1) 0%, rgba(46, 30, 16, 1) 35%, rgba(69, 39, 30, 1) 100%);
-
-  position: relative;
+	height: 180px;
+	width: 320px;
+	display: none;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	border: 2px solid;
+	border-radius: 8px;
+	margin: 16px auto 8px auto;
+	font-family: "Lato", sans-serif;
+	background: linear-gradient(
+		90deg,
+		rgba(69, 50, 30, 1) 0%,
+		rgba(46, 30, 16, 1) 35%,
+		rgba(69, 39, 30, 1) 100%
+	);
+	position: relative;
 }
 
 .resultado h2 {
-  text-align: center;
-  font-family: 'Fjalla One', sans-serif;
-  font-size: 2.2rem;
-  letter-spacing: 2px;
-  z-index: 5;
-  background-color: #FFF;
-  color: #000;
-  border-radius: 12px;
-  padding: 12px;
+	text-align: center;
+	font-family: "Fjalla One", sans-serif;
+	font-size: 2.2rem;
+	letter-spacing: 2px;
+	z-index: 5;
+	background-color: #fff;
+	color: #000;
+	border-radius: 12px;
+	padding: 12px;
 }
 
 .resultado iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
-@media screen and (min-width: 320px) and (max-width: 480px) {}
+/* Mobile responsive styles */
+@media screen and (max-width: 480px) {
+	.card-sorteio {
+		width: 95%;
+		min-height: calc(100vh - 240px);
+		padding: 12px;
+	}
+
+	.tittle-logo img {
+		max-width: 240px;
+		height: auto;
+	}
+
+	.escolha-sorteio h3 {
+		font-size: 1.2rem;
+	}
+
+	.radio-btn {
+		gap: 1rem;
+	}
+
+	.form-check-input {
+		transform: scale(1.3);
+	}
+
+	.form-check-input + label {
+		font-size: 1rem;
+	}
+
+	.primeiro-numero input,
+	.ultimo-numero input {
+		max-width: 60px;
+		font-size: 0.9rem;
+		padding: 0.3rem;
+	}
+
+	.sortear-nomes textarea {
+		height: 70px;
+		font-size: 0.9rem;
+	}
+
+	.btn-sorteio {
+		width: 100%;
+		max-width: 280px;
+		margin: 0.75rem auto;
+	}
+
+	.btn-sorteio button {
+		padding: 0.6rem 1rem;
+		font-size: 1rem;
+	}
+
+	.resultado h2 {
+		font-size: 1.5rem;
+		padding: 0.6rem;
+	}
+
+	.resultado iframe {
+		width: 100%;
+		height: 150px;
+		margin: 0.75rem 0;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		padding: 1rem;
+	}
+
+	.card-sorteio {
+		width: 100%;
+		max-width: 450px;
+		height: auto;
+		padding: 1rem;
+		margin: 0 auto;
+	}
+
+	.card-sorteio::before {
+		width: 140%;
+		height: 130%;
+	}
+
+	.card-sorteio::after {
+		width: 100%;
+		height: auto;
+		margin: 0;
+	}
+
+	.tittle-logo img {
+		max-width: 140px;
+		height: auto;
+	}
+
+	.escolha-sorteio h3 {
+		font-size: 1.4rem;
+	}
+
+	.radio-btn {
+		gap: 1.5rem;
+	}
+
+	.form-check-input {
+		transform: scale(1.4);
+	}
+
+	.form-check-input + label {
+		font-size: 1.1rem;
+	}
+
+	.primeiro-numero input,
+	.ultimo-numero input {
+		max-width: 80px;
+		font-size: 1rem;
+		padding: 0.5rem;
+	}
+
+	.resultado-sorteio {
+		margin-top: 1rem;
+	}
+
+	.btn-sorteio {
+		width: 100%;
+		max-width: 350px;
+		margin: 1rem auto;
+	}
+
+	.btn-sorteio button {
+		padding: 0.8rem 1.5rem;
+		font-size: 1.2rem;
+	}
+
+	.resultado h2 {
+		font-size: 1.8rem;
+		padding: 0.8rem;
+	}
+
+	.resultado iframe {
+		width: 100%;
+		height: 200px;
+		margin: 1rem 0;
+	}
+}

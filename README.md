@@ -1,6 +1,6 @@
 # Just Luck - Destiny Draws 🎲
 
-<div data-badges>
+<div data-badges style="display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0; justify-content: center; align-items: center; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
   <!-- HTML5 Badge -->
   <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer" 
      style="text-decoration: none; transition: transform 0.15s ease-out;"
@@ -8,6 +8,7 @@
      onmouseout="this.style.transform='none'">
     <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" 
          alt="HTML5" 
+         style="height: 28px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.08);">
   </a>
 
   <!-- CSS3 Badge -->
@@ -17,6 +18,7 @@
      onmouseout="this.style.transform='none'">
     <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" 
          alt="CSS3" 
+         style="height: 28px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.08);">
   </a>
 
   <!-- JavaScript Badge -->
@@ -26,6 +28,7 @@
      onmouseout="this.style.transform='none'">
     <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" 
          alt="JavaScript" 
+         style="height: 28px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.08);">
   </a>
 
   <!-- Bootstrap Badge -->
@@ -35,6 +38,7 @@
      onmouseout="this.style.transform='none'">
     <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" 
          alt="Bootstrap" 
+         style="height: 28px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.08);">
   </a>
 </div>
 

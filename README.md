@@ -1,9 +1,46 @@
 # Just Luck - Destiny Draws 🎲
 
-[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
-[![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+<div data-badges>
+  <!-- HTML5 Badge -->
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer" 
+     style="text-decoration: none; transition: transform 0.15s ease-out;"
+     onmouseover="this.style.transform='translateY(-2px)'" 
+     onmouseout="this.style.transform='none'">
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" 
+         alt="HTML5" 
+         style="height: 28px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.08);">
+  </a>
+
+  <!-- CSS3 Badge -->
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" rel="noopener noreferrer"
+     style="text-decoration: none; transition: transform 0.15s ease-out;"
+     onmouseover="this.style.transform='translateY(-2px)'" 
+     onmouseout="this.style.transform='none'">
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" 
+         alt="CSS3" 
+         style="height: 28px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.08);">
+  </a>
+
+  <!-- JavaScript Badge -->
+  <a href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer"
+     style="text-decoration: none; transition: transform 0.15s ease-out;"
+     onmouseover="this.style.transform='translateY(-2px)'" 
+     onmouseout="this.style.transform='none'">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" 
+         alt="JavaScript" 
+         style="height: 28px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.08);">
+  </a>
+
+  <!-- Bootstrap Badge -->
+  <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer"
+     style="text-decoration: none; transition: transform 0.15s ease-out;"
+     onmouseover="this.style.transform='translateY(-2px)'" 
+     onmouseout="this.style.transform='none'">
+    <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" 
+         alt="Bootstrap" 
+         style="height: 28px; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.08);">
+  </a>
+</div>
 
 ## 🌟 Descrição
 Just Luck é uma aplicação web moderna e responsiva para sorteios de números e nomes. Com uma interface limpa e intuitiva, você pode facilmente realizar sorteios aleatórios para diversos fins, como sorteios em eventos, seleções aleatórias ou qualquer situação que precise de um elemento de sorte.
